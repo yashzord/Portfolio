@@ -1,0 +1,141 @@
+/* Hero Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #16213e;
+    transition: background-color 0.5s ease; /* Smooth transition */
+  }
+  
+  /* Dark Mode Background */
+  .hero-container.dark-mode {
+    background-color: #111111;
+  }
+  
+  /* Hero Content Styling */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out; /* Smooth transition for text size and color */
+  }
+  
+/* Light Text Theme (Solid Colors) */
+.hero-content.light-text .hero-title {
+    color: #d3a625; /* Solid golden color for the title */
+  }
+  
+  .hero-content.light-text .hero-name {
+    color: #740001; /* Solid deep red for the name */
+  }
+  
+  .hero-content.light-text .hero-typed {
+    color: #eeba30; /* Solid lighter golden color for the typed text */
+  }
+  
+  /* Dark Text Theme (Vibrant Solid Colors) */
+  .hero-content.dark-text .hero-title {
+    color: #ff71ce; /* Vibrant pink */
+  }
+  
+  .hero-content.dark-text .hero-name {
+    color: #05ffa1; /* Bright green */
+  }
+  
+  .hero-content.dark-text .hero-typed {
+    color: #b967ff; /* Soft purple */
+  }
+  
+  
+  /* Text Size for Ballpit Modes */
+  .hero-content.small-text .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-content.small-text .hero-name {
+    font-size: 4.5rem;
+  }
+  
+  .hero-content.small-text .hero-typed {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content.large-text .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-content.large-text .hero-name {
+    font-size: 4.5rem;
+  }
+  
+  .hero-content.large-text .hero-typed {
+    font-size: 2.5rem;
+  }
+  
+  /* Button Styling */
+  .hero-button {
+    background-color: #ff6f61;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .hero-button:hover {
+    background-color: #e85b57;
+    transform: scale(1.05);
+  }
+  
+  /* Ballpit Container */
+  .ballpit-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Behind hero content */
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  }
+  
+  .ballpit-container.fade-in {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .ballpit-container.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Animations */
+  .animated-title {
+    animation: fadeSlideIn 1s ease-in-out forwards;
+  }
+  
+  .animated-name {
+    animation: fadeSlideIn 1.2s ease-in-out forwards;
+  }
+  
+  .animated-typed {
+    animation: fadeSlideIn 1.5s ease-in-out forwards;
+  }
+  
+  /* Keyframes for animation */
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,30 @@
+/* src/pageTransitions.css */
+
+/* 
+   We fade the .page- classes. 
+   We'll also give the container a black background during the transition. 
+   You can customize or add an overlay if you wish.
+*/
+
+.page-enter {
+    opacity: 0;
+    background-color: black;
+  }
+  
+  .page-enter.page-enter-active {
+    opacity: 1;
+    background-color: black;
+    transition: opacity 700ms ease, background-color 700ms ease;
+  }
+  
+  .page-exit {
+    opacity: 1;
+    background-color: black;
+  }
+  
+  .page-exit.page-exit-active {
+    opacity: 0;
+    background-color: black;
+    transition: opacity 700ms ease, background-color 700ms ease;
+  }
+  

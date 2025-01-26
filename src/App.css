@@ -1,0 +1,225 @@
+/* RESET & GLOBAL BOX SIZING */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY DEFAULTS */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa; /* Will be overridden by .light-mode or .dark-mode */
+  color: #212529;
+  scroll-behavior: smooth;
+}
+
+/* Default .App structure (if used) */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: rgba(52, 58, 64, 0.8); /* Default semi-transparent */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-light {
+  background: linear-gradient(135deg, #fceabb, #f8b500); /* Subtle light gray for light mode */
+  color: #333;
+}
+
+.navbar-dark {
+  background: rgba(0, 0, 0, 0.8); /* Dark mode */
+  color: #f8f9fa;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6f61 !important; /* Accent color */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for initials */
+.navbar-brand:hover {
+  transform: scale(1.1); /* Slight enlargement */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Increased spacing between icon and text */
+  transition: transform 0.3s ease;
+}
+
+/* Section-specific colors */
+.navbar-nav .about-link {
+  color: #f42310; /* About color */
+}
+
+.navbar-nav .education-link {
+  color: #2d23ea; /* Education color */
+}
+
+.navbar-nav .skills-link {
+  color: #28b048; /* Skills color */
+}
+
+.navbar-nav .experience-link {
+  color: #ea318d; /* Experience color */
+}
+
+.navbar-nav .projects-link {
+  color: #8b29e2; /* Projects color */
+}
+
+.navbar-nav .leadership-link {
+  color: #ff0749; /* Leadership color */
+}
+
+.navbar-nav .contact-link {
+  color: #07b6cd; /* Contact color */
+}
+
+/* Hover effect for section links (no color change) */
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1); /* Slight enlargement only */
+}
+
+/* Button Styles */
+.nav-item .btn {
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: all 0.3s ease, transform 0.3s ease;
+}
+
+/* Splash Button */
+.splash-btn {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+  margin-left: 1.5rem; /* Add space between Contact and Splash Icon */
+  margin-right: 1.5rem; /* Add space between Splash Icon and Theme Button */
+}
+
+.splash-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.splash-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Theme Button */
+.theme-btn {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Icon visibility in dark mode */
+.navbar-dark .splash-btn {
+  border: 2px solid #00d4ff;
+  color: #00d4ff;
+}
+
+.navbar-dark .splash-btn.active {
+  background-color: #00d4ff;
+  color: #000; /* High contrast for visibility */
+}
+
+.navbar-dark .theme-btn {
+  border: 2px solid #f1c40f;
+  color: #f1c40f;
+}
+
+.navbar-dark .theme-btn:hover {
+  background-color: #f1c40f;
+  color: #000;
+}
+
+/* Spacing between buttons */
+.nav-item.ms-2 {
+  margin-left: 0.5rem; /* Add spacing between Splash and Dark/Light Mode buttons */
+}
+
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #343a40, #212529); /* Plain gradient background */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  z-index: 10; /* Ensure it's above background layers */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Floating shadow effect */
+  opacity: 0.95; /* Slight transparency for floating feel */
+}
+
+.footer-text {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  opacity: 0.9; /* Slight transparency for the text */
+}
+
+
+
+/* THEME WRAPPERS */
+.light-mode {
+  background-color: #fafafa;
+  color: #212529;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+/* SINGLE GRADIENT FOR ALL NON-HERO SECTIONS */
+.light-mode .main-sections {
+  background: linear-gradient(135deg, #c6ffdd, #fbd786, #f7797d);
+  color: #212529; /* adjust text color if needed */
+}
+
+.dark-mode .main-sections {
+  background: linear-gradient(135deg, #360033, #0b8793);
+  color: #e5e5e5; /* adjust text color if needed */
+}
+
+/* Make sections inside .main-sections transparent so the single gradient shows through */
+.main-sections section {
+  background: none;
+  padding: 80px 20px;
+  min-height: 100vh; /* each fills the viewport height if desired */
+  position: relative;
+}
+
+/* HEADINGS, MARGINS, ETC. INSIDE NON-HERO SECTIONS */
+.main-sections section h2 {
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-align: center;
+}
