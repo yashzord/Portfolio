@@ -1,36 +1,46 @@
 import React from "react";
 import { education, relevantCoursework } from "../data";
 import TiltedCard from "./TiltedCard";
-import "./TiltedCard.css";
+import "./Education.css";
+import { FaGraduationCap, FaStar, FaChartLine } from "react-icons/fa"; // Import icons
 
 const Education = () => {
   return (
-    <section id="education" data-aos="fade-up">
+    <section id="education" data-aos="fade-up" className="education-section">
       <div className="container">
         <h2 className="text-center">Education</h2>
         <div className="row justify-content-center">
           {education.map((edu, index) => (
             <TiltedCard
               key={index}
-              containerHeight="600px" // Increased height
-              containerWidth="400px"  // Reduced width for a vertical card
+              containerHeight="600px"
+              containerWidth="400px"
               rotateAmplitude={12}
               scaleOnHover={1.2}
               displayOverlayContent={true}
               overlayContent={
                 <div>
-                  <h5>{edu.degree}</h5>
-                  <p>
-                    <strong>School:</strong> {edu.school}
+                  <h5 className="education-degree">{edu.degree}</h5>
+                  <p className="education-school">
+                    <a
+                      href="https://www.binghamton.edu/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {edu.school}
+                    </a>
                   </p>
-                  <p>
+                  <p className="education-gpa">
+                    <FaChartLine className="icon" />
                     <strong>GPA:</strong> {edu.gpa}
                   </p>
-                  <p>
+                  <p className="education-graduation">
+                    <FaGraduationCap className="icon" />
                     <strong>Graduation:</strong> {edu.graduation}
                   </p>
                   {edu.honors && (
-                    <p>
+                    <p className="education-honors">
+                      <FaStar className="icon" />
                       <strong>Honors:</strong> {edu.honors}
                     </p>
                   )}
@@ -38,18 +48,17 @@ const Education = () => {
               }
             />
           ))}
-        </div>
-        <div className="row justify-content-center mt-4">
+
           <TiltedCard
-            containerHeight="600px" // Taller card for Relevant Coursework
-            containerWidth="400px"  // Vertical design
+            containerHeight="600px"
+            containerWidth="400px"
             rotateAmplitude={12}
             scaleOnHover={1.2}
             displayOverlayContent={true}
             overlayContent={
               <div>
-                <h5>Relevant Coursework</h5>
-                <p>{relevantCoursework}</p>
+                <h5 className="education-degree">Relevant Coursework</h5>
+                <p className="relevant-coursework">{relevantCoursework}</p>
               </div>
             }
           />
