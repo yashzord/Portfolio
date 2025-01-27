@@ -1,3 +1,5 @@
+/* src/components/TiltedCard.css */
+
 .tilted-card-figure {
   margin: 1rem;
   margin-bottom: 5rem;
@@ -16,7 +18,7 @@
   transform-style: preserve-3d;
   border-radius: 15px;
   background: linear-gradient(135deg, #00aaff, #00ffaa); /* Default */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.99);
   color: white;
   overflow: hidden;
   padding: 1rem;
@@ -27,11 +29,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
-  border-radius: 15px;
-  will-change: transform;
-  transform: translateZ(0);
-  display: none; /* Hides image unless needed */
+  object-fit: cover; /* Ensures the image scales to cover the card without distortion */
+  width: 100% !important; /* Match the card's width */
+  height: 100%; /* Match the card's height */
+  border-radius: 15px; /* Maintain rounded corners */
+  display: block; /* Ensure the image is displayed */
 }
 
 .tilted-card-overlay {
@@ -40,6 +42,10 @@
   will-change: transform;
   transform: translateZ(30px);
   color: inherit; /* Inherit text color */
+  /* **Added Properties for Scrollable Content** */
+  max-height: 100%; /* Ensures overlay doesn't exceed card's height */
+  overflow-y: auto; /* Enables vertical scrolling when content overflows */
+  padding-right: 0.5rem; /* Adds some padding to prevent content from touching scrollbar */
 }
 
 .tilted-card-caption {
@@ -88,4 +94,3 @@
 .dark-mode .tilted-card-overlay {
   color: #151617; /* Text inside tilted card */
 }
-

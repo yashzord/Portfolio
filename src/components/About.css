@@ -1,0 +1,207 @@
+/* Add Space Between Icon and Text */
+.about-email .icon,
+.about-phone .icon,
+.about-location .icon {
+  margin-right: 2rem; /* Add space between icon and text */
+  font-size: 1.2rem; /* Consistent icon size */
+  vertical-align: middle; /* Align icon with text */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Remove underline for links */
+.about-email a,
+.about-phone a,
+.about-location a {
+  text-decoration: none; /* Remove underline */
+  font-size: inherit;
+  display: inline-flex; /* Align icon and text */
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover and color transition */
+}
+
+/* Hover Effects */
+.about-email a:hover,
+.about-phone a:hover,
+.about-location a:hover {
+  transform: scale(1.2); /* Slightly enlarge text on hover */
+}
+
+.about-email:hover .icon,
+.about-phone:hover .icon,
+.about-location:hover .icon {
+  transform: scale(1.2); /* Icons also enlarge on hover */
+}
+
+/* Light Mode Styles */
+.light-mode .about-name {
+  color: #1e88e5; /* Blue for light mode */
+}
+
+.light-mode .about-email a,
+.light-mode .about-email .icon {
+  color: #007bff; /* Blue for email text and icon */
+}
+
+.light-mode .about-phone a,
+.light-mode .about-phone .icon {
+  color: #34c054; /* Green for phone text and icon */
+}
+
+.light-mode .about-location a,
+.light-mode .about-location .icon {
+  color: #dc3545; /* Red for location text and icon */
+}
+
+.light-mode .about-goal {
+  color: #37474f; /* Subtle dark gray */
+}
+
+/* Dark Mode Styles */
+.dark-mode .about-name {
+  color: #90caf9; /* Light blue for dark mode */
+}
+
+.dark-mode .about-email a,
+.dark-mode .about-email .icon {
+  color: #409b9b; /* Light blue for email text and icon */
+}
+
+.dark-mode .about-phone a,
+.dark-mode .about-phone .icon {
+  color: #282128; /* Lighter green for phone text and icon */
+}
+
+.dark-mode .about-location a,
+.dark-mode .about-location .icon {
+  color: #ef5350; /* Lighter red for location text and icon */
+}
+
+.dark-mode .about-goal {
+  color: #cfd8dc; /* Subtle light gray */
+}
+
+/* Socials List */
+.socials-list {
+    text-align: center;
+}
+
+.socials-list .connect-message,
+.socials-list .chess-message,
+.socials-list .music-message {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+font-weight: bold;
+}
+
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 1rem; /* Space between icons */
+margin-bottom: 1rem;
+}
+
+.social-icons a {
+font-size: 2rem; /* Icon size */
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Chess Links: Ensure hover applies to both icon and text */
+.socials-list p a {
+display: inline-flex; /* Make the link wrap icon + text */
+align-items: center; /* Align icon and text */
+gap: 0.5rem; /* Space between icon and text */
+text-decoration: none; /* Remove underline from text */
+font-size: 1.1rem; /* Font size for text */
+transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.socials-list p a:hover {
+transform: scale(1.1); /* Slightly enlarge both icon and text on hover */
+color: #ff6f61; /* Example hover color, customize if needed */
+}
+
+.socials-list p a .icon {
+font-size: 1.5rem; /* Icon size for chess */
+transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Individual Icon Colors (Light Mode) */
+.light-mode .github {
+color: #333;
+}
+.light-mode .linkedin {
+color: #0a66c2;
+}
+.light-mode .stackoverflow {
+color: #f48024;
+}
+.light-mode .instagram {
+color: #e4405f;
+}
+.light-mode .twitter {
+color: #1da1f2;
+}
+.light-mode .spotify {
+color: #1db954;
+}
+.light-mode .lichess a {
+color: #6a4c93;
+}
+.light-mode .chesscom a {
+color: #2a9d8f;
+}
+
+/* Individual Icon Colors (Dark Mode) */
+.dark-mode .github {
+color: #bbb;
+}
+.dark-mode .linkedin {
+color: #82b1ff;
+}
+.dark-mode .stackoverflow {
+color: #f9a826;
+}
+.dark-mode .instagram {
+color: #ff639f;
+}
+.dark-mode .twitter {
+color: #76c7f2;
+}
+.dark-mode .spotify {
+color: #39d98a;
+}
+.dark-mode .lichess a {
+color: #c8a2c8;
+}
+.dark-mode .chesscom a {
+color: #a3d3cb;
+}
+
+/* Add Space Between Chess Icon and Text */
+.about-chess .icon {
+margin-right: 2rem; /* Add space between chess icon and text */
+font-size: 1.5rem; /* Icon size */
+vertical-align: middle; /* Align icon with text */
+}
+
+/* Text Hover Effect for Chess Links */
+.about-chess a {
+text-decoration: none; /* Remove underline */
+font-size: 1.1rem; /* Text size */
+transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.about-chess a:hover {
+transform: scale(1.2); /* Slightly enlarge text on hover */
+color: #ff6f61; /* Change color on hover */
+}
+
+/* No Hover Effect for Chess Icons */
+.about-chess .icon:hover {
+transform: none; /* Keep icon static on hover */
+}
+  
