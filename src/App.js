@@ -1,6 +1,6 @@
 // src/App.js
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -17,11 +17,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
 
-/* For multi-page + fade transitions (nodeRef fix) */
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-// NEW: Black fade transitions in pageTransitions.css
 import "./pageTransitions.css";
 
 function App() {
@@ -32,17 +30,11 @@ function App() {
     AOS.init({ duration: 800 });
   }, []);
 
-  /**
-   * handleScrollToSection
-   * - We use an extra offset of 80px for "padding" from the top
-   * - You can adjust the '80' to any number you like (e.g., 100, 120, etc.)
-   */
   const handleScrollToSection = (id) => {
     const section = document.getElementById(id);
     const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 0;
 
     if (section) {
-      // Increase or decrease '80' to fine-tune the offset
       const offsetTop = section.offsetTop - navbarHeight - 20;
       window.scrollTo({
         top: offsetTop,
@@ -59,19 +51,15 @@ function App() {
     setIsDarkMode((prev) => !prev);
   };
 
-  // For route transitions
   const location = useLocation();
 
-  // === Refs to avoid findDOMNode usage ===
   const [nodeRefs] = useState({});
-  // We only track the REFS by pathname so that hash changes won't cause new transitions
   const routePath = location.pathname;
 
   if (!nodeRefs[routePath]) {
     nodeRefs[routePath] = React.createRef();
   }
 
-  // Scroll if /main#hash
   useEffect(() => {
     if (location.pathname === "/main" && location.hash) {
       const anchor = location.hash.replace("#", "");
@@ -80,12 +68,11 @@ function App() {
   }, [location]);
 
   return (
-    // Use routePath as the key for transitions
     <TransitionGroup component={null}>
       <CSSTransition
         key={routePath}
-        timeout={700}     // <-- Slightly longer for extra smooth
-        classNames="page" // page- classes in pageTransitions.css
+        timeout={700}
+        classNames="page"
         nodeRef={nodeRefs[routePath]}
       >
         <div ref={nodeRefs[routePath]}>
@@ -140,10 +127,7 @@ function App() {
                     onItemClick={(sectionId) => handleScrollToSection(sectionId)}
                   />
 
-                  {/* 
-                    All sections displayed on one page; 
-                    handleScrollToSection just scrolls to the heading. 
-                  */}
+                  {/* All sections displayed on one page */}
                   <div className="main-sections">
                     <section id="about">
                       <About />
@@ -179,7 +163,7 @@ function App() {
   );
 }
 
-// Wrap App with BrowserRouter
+// Wrap App with HashRouter
 export default function WrappedApp() {
   return (
     <Router>
