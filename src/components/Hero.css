@@ -78,14 +78,15 @@
   
   /* Button Styling */
   .hero-button {
-    background-color: #ff6f61;
-    color: white;
+    background-color: #e54a20;
+    color: rgb(23, 23, 23);
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s;
+    margin-top: 20px;
   }
   
   .hero-button:hover {
