@@ -1,0 +1,135 @@
+/* Experience Section */
+.experience-section {
+padding: 40px 20px;
+text-align: center;
+}
+
+/* Experience Card */
+.experience-card {
+text-align: left;
+padding: 15px;
+overflow: hidden; /* Ensures no scrolling */
+}
+
+/* Job Title */
+.experience-title {
+font-size: 1.4rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+/* Organization */
+.experience-organization {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-weight: bold;
+}
+
+/* Location */
+.experience-location {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+/* Duration */
+.experience-duration {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-style: italic;
+font-weight: bold;
+}
+
+/* Bullet Points */
+.experience-points {
+list-style-type: disc;
+padding-left: 20px;
+margin-top: 10px;
+}
+
+/* GitHub Repository */
+.experience-github {
+margin-top: 15px;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+/* Icons */
+.icon {
+font-size: 1.1rem;
+vertical-align: middle;
+color: inherit;
+}
+
+/* Light Mode */
+.light-mode .experience-title {
+color: #e51e32; /* Red for job title */
+}
+
+.light-mode .experience-organization a,
+.light-mode .experience-location a,
+.light-mode .experience-github a {
+color: #bde51e; /* Blue for links */
+text-decoration: none;
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.light-mode .experience-organization a:hover,
+.light-mode .experience-location a:hover,
+.light-mode .experience-github a:hover {
+transform: scale(1.1);
+color: #1565c0; /* Darker blue on hover */
+}
+
+/* Light Mode - Duration & Bullet Points */
+.light-mode .experience-duration {
+color: #ff9800; /* Orange for duration */
+}
+
+.light-mode .experience-points li {
+color: #1205a1; /* Green for bullet points */
+}
+
+/* Dark Mode */
+.dark-mode .experience-title {
+color: #0f86e8; /* Light blue for job title */
+}
+
+.dark-mode .experience-organization a,
+.dark-mode .experience-location a,
+.dark-mode .experience-github a {
+color: #90caf9; /* Light blue for links */
+text-decoration: none;
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.dark-mode .experience-organization a:hover,
+.dark-mode .experience-location a:hover,
+.dark-mode .experience-github a:hover {
+transform: scale(1.1);
+color: #64b5f6; /* Lighter blue on hover */
+}
+
+/* Dark Mode - Duration & Bullet Points */
+.dark-mode .experience-duration {
+color: #ffcc00; /* Yellow for duration */
+}
+
+.dark-mode .experience-points li {
+color: #66ff66; /* Light green for bullet points */
+}
+
+/* Hover Effects */
+.experience-link {
+text-decoration: none;
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.experience-link:hover {
+transform: scale(1.1);
+}
+  

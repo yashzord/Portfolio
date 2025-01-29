@@ -1,0 +1,149 @@
+/* Leadership Section */
+.leadership-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* Leadership Card */
+  .leadership-card {
+    text-align: left;
+    padding: 15px;
+    overflow: hidden; /* Ensures no scrollbars */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  .leadership-card::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .leadership-card {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  /* Role Title */
+  .leadership-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Organization */
+  .leadership-organization {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Location */
+  .leadership-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Duration */
+  .leadership-duration {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  /* Bullet Points */
+  .leadership-points {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Icons */
+  .icon {
+    font-size: 1.1rem;
+    vertical-align: middle;
+    color: inherit;
+  }
+  
+  /* Light Mode */
+  .light-mode .leadership-title {
+    color: #e51e32; /* Red for title */
+  }
+  
+  .light-mode .leadership-organization a {
+    color: #1e88e5; /* Blue for organization */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .light-mode .leadership-organization a:hover {
+    transform: scale(1.1);
+    color: #1565c0; /* Darker blue on hover */
+  }
+  
+  .light-mode .leadership-location a {
+    color: #e57373; /* Light red for location */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .light-mode .leadership-location a:hover {
+    transform: scale(1.1);
+    color: #d32f2f; /* Darker red on hover */
+  }
+  
+  .light-mode .leadership-duration {
+    color: #ff9800; /* Orange for duration */
+  }
+  
+  .light-mode .leadership-points li {
+    color: #4caf50; /* Green for bullet points */
+  }
+  
+  /* Dark Mode */
+  .dark-mode .leadership-title {
+    color: #0f86e8; /* Light blue for title */
+  }
+  
+  .dark-mode .leadership-organization a {
+    color: #90caf9; /* Light blue for organization */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .dark-mode .leadership-organization a:hover {
+    transform: scale(1.1);
+    color: #64b5f6; /* Lighter blue on hover */
+  }
+  
+  .dark-mode .leadership-location a {
+    color: #ffccbc; /* Light red for location */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .dark-mode .leadership-location a:hover {
+    transform: scale(1.1);
+    color: #ff7043; /* Darker red on hover */
+  }
+  
+  .dark-mode .leadership-duration {
+    color: #ffcc00; /* Yellow for duration */
+  }
+  
+  .dark-mode .leadership-points li {
+    color: #66ff66; /* Light green for bullet points */
+  }
+  
+  /* Hover Effects */
+  .leadership-link {
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+  }
+  
+  .leadership-link:hover {
+    transform: scale(1.1);
+  }
+  

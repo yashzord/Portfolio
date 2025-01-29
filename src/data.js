@@ -38,12 +38,8 @@ export const about = {
       "D3.js",
       "Wireshark",
       "Git",
-      "GitHub",
       "Linux",
-      "Unix",
       "Visual Studio Code",
-      "Jupyter Notebook",
-      "LTspice",
     ],
     databases: ["MongoDB", "MySQL", "PostgreSQL"],
     certifications: ["Relational Database Systems"],
@@ -51,18 +47,18 @@ export const about = {
   
   export const experience = [
     {
-      title: "Software Developer",
+      title: "Software Developer Intern",
       organization: "CoreCard Inc",
       location: "Atlanta, Georgia",
       duration: "July 2023 – August 2023",
       points: [
         "Developed a 3D interactive visualization prototype using D3.js, Dash, and Python libraries, resulting in a 30% reduction in client analysis time through clear, interactive graphics.",
-        "Optimized Flask integration to handle 50+ API calls daily, improving data retrieval by 20% and simplifying workflows for client-facing reports.",
+        "Optimized Flask integration for 50+ daily API calls, boosting data retrieval by 20% and improving client workflows.",
         "Delivered a high-fidelity visualization prototype to over 10 clients, showcasing analytical features that directly impacted decision-making processes and led to actionable insights for credit card data initiatives exceeding $500K.",
       ],
     },
     {
-      title: "Machine Learning Engineer",
+      title: "Machine Learning Engineer Intern",
       organization: "CoreCard Inc",
       location: "Atlanta, Georgia",
       duration: "May 2023 – June 2023",
@@ -119,7 +115,7 @@ export const about = {
       ],
       duration: "August 2024 - December 2024",
       points: [
-        "Scraped and processed 100K+ data points from 2 subreddits, 2 4chan boards, and 2 YouTube channels to analyze trends in technology and movies.",
+        "Scraped and processed 100K+ data points from Reddit, 4chan, and YouTube to analyze technology and movie trends.",
         "Executed real-time scraping, resolving 95% of rate limits and HTTP errors, processed 10,000+ data points in MongoDB, and assessed toxicity with 90% accuracy using a Flask-based dashboard and LLM chatbot.",
         "Generated insights into trend creation, concluding Reddit’s structured discussions are 30% more effective for long-term trends while 4chan excels in short-term viral trends.",
       ],

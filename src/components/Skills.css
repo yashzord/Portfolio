@@ -1,0 +1,89 @@
+/* Skills Section */
+.skills-section {
+padding: 40px 20px;
+text-align: center;
+}
+
+.skills-title {
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+/* Light Mode */
+.light-mode .skills-title {
+color: #e51e32; /* Blue title for light mode */
+}
+
+.light-mode .skills-link {
+color: #4a03e4; /* Purple text for list items in light mode */
+text-decoration: none; /* No underline */
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.light-mode .skills-link:hover {
+transform: scale(1.1); /* Enlarge the text slightly */
+color: #c015ac; /* Darker blue on hover for light mode */
+}
+
+.light-mode .certification-link {
+font-size: 1rem;
+font-weight: bold;
+color: #211ee5; /* Green link for light mode */
+text-decoration: none; /* No underline */
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.light-mode .certification-link:hover {
+transform: scale(1.1); /* Enlarge the text slightly */
+color: #1565c0; /* Darker green on hover for light mode */
+}
+
+/* Dark Mode */
+.dark-mode .skills-title {
+color: #210fe8; /* Light blue title for dark mode */
+}
+
+.dark-mode .skills-link {
+color: #05c2ed; /* Green text for list items in dark mode */
+text-decoration: none; /* No underline */
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.dark-mode .skills-link:hover {
+transform: scale(1.1); /* Enlarge the text slightly */
+color: #121213; /* Lighter green on hover for dark mode */
+}
+
+.dark-mode .certification-link {
+font-size: 1rem;
+font-weight: bold;
+color: #ea4c03; /* Orange link for dark mode */
+text-decoration: none; /* No underline */
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.dark-mode .certification-link:hover {
+transform: scale(1.1); /* Enlarge the text slightly */
+color: #121213; /* Lighter orange on hover for dark mode */
+}
+
+/* Skills List */
+.skills-list {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+/* Certification Link Container */
+.certification-container {
+text-align: center;
+margin-top: 20px;
+}
+
+.icon {
+font-size: 1.5rem;
+margin-right: 0.5rem;
+vertical-align: middle;
+color: inherit; /* Inherit color from the title */
+}  

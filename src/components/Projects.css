@@ -1,0 +1,117 @@
+/* Projects Section */
+.projects-section {
+padding: 40px 20px;
+text-align: center;
+}
+
+/* Project Card */
+.project-card {
+text-align: left;
+padding: 15px;
+overflow: hidden; /* Ensures no scrollbars */
+}
+
+
+/* Project Title */
+.project-title {
+font-size: 1.4rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+/* Technologies */
+.project-technologies {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+/* Duration */
+.project-duration {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-style: italic;
+font-weight: bold;
+}
+
+/* Bullet Points */
+.project-points {
+list-style-type: disc;
+padding-left: 20px;
+margin-top: 10px;
+}
+
+/* GitHub Repository */
+.project-github {
+margin-top: 15px;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+/* Icons */
+.icon {
+font-size: 1.1rem;
+vertical-align: middle;
+color: inherit;
+}
+
+/* Light Mode */
+.light-mode .project-title {
+color: #e51e32; /* Red for project title */
+}
+
+.light-mode .project-technologies a {
+color: #1e88e5; /* Blue for technology links */
+text-decoration: none;
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.light-mode .project-technologies a:hover {
+transform: scale(1.1);
+color: #1565c0; /* Darker blue on hover */
+}
+
+.light-mode .project-duration {
+color: #ff9800; /* Orange for duration */
+}
+
+.light-mode .project-points li {
+color: #4caf50; /* Green for bullet points */
+}
+
+/* Dark Mode */
+.dark-mode .project-title {
+color: #0f86e8; /* Light blue for project title */
+}
+
+.dark-mode .project-technologies a {
+color: #90caf9; /* Light blue for links */
+text-decoration: none;
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.dark-mode .project-technologies a:hover {
+transform: scale(1.1);
+color: #64b5f6; /* Lighter blue on hover */
+}
+
+.dark-mode .project-duration {
+color: #ffcc00; /* Yellow for duration */
+}
+
+.dark-mode .project-points li {
+color: #66ff66; /* Light green for bullet points */
+}
+
+/* Hover Effects */
+.project-link {
+text-decoration: none;
+transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+transform: scale(1.1);
+}
